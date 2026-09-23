@@ -1,0 +1,263 @@
+:root{
+--espresso: #482728ff;
+--spicy-paprika: #dd6031ff;
+--deep-forest: #003e1fff;
+--golden-pollen: #f9cb40ff;
+--vibrant-coral: #ff5757ff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to top ,#482728ff, #dd6031ff,#f9cb40ff);
+    color: #292929;
+}
+
+header {
+    background: #003e1fff;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #f9cb40ff;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.hero {
+    min-height: 520px;
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:none ;
+}
+
+.hero h1 {
+    font-size: 58px;
+    color: #8d1717;
+    margin: 12px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 550px;
+}
+
+.tag {
+    color: #b52222;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.pizza-grande {
+    font-size: 190px;
+    filter: drop-shadow(8px 10px 5px rgba(0,0,0,0.2));
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #b52222;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: #8d1717;
+}
+
+.secao {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.secao h2 {
+    font-size: 36px;
+    color: white;
+}
+
+.subtitulo {
+    margin: 10px 0 35px;
+    color: wheat;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.card .pizza {
+    font-size: 70px;
+}
+
+.card h3 {
+    color: #8d1717;
+    margin: 12px 0;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.5;
+    min-height: 70px;
+}
+
+.card strong {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.pedido {
+    background-image: linear-gradient(to top, #dd6031ff,#482728ff);
+    background-attachment: fixed;
+}
+
+form {
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.enviar {
+    width: 100%;
+    font-size: 17px;
+}
+
+.resultado {
+    max-width: 650px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background: #e8f7e8;
+    border-radius: 10px;
+    display: none;
+}
+
+.resultado:not(:empty) {
+    display: block;
+}
+
+footer {
+    background: #003e1fff;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        text-align: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .pizza-grande {
+        font-size: 120px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .secao {
+        padding: 50px 6%;
+    }
+}
