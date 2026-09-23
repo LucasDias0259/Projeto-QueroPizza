@@ -1,8 +1,9 @@
+
 # 🍕 QueroPizza — Site de Pizzaria
 
-Site de uma pizzaria desenvolvido para praticar **HTML, CSS e JavaScript**.
+Site de uma pizzaria desenvolvido para praticar **HTML e CSS**.
 
-O projeto apresenta um cardápio de pizzas e um formulário onde o cliente pode preencher seus dados e realizar um pedido.
+O projeto apresenta um cardápio de pizzas e um formulário visual onde o cliente pode preencher seus dados para realizar um pedido.
 
 ---
 
@@ -12,17 +13,17 @@ O **QueroPizza** é um projeto de site de pizzaria com uma interface simples, mo
 
 O cliente pode:
 
-* 🏠 Acessar a página inicial
-* 🍕 Visualizar o cardápio
-* 📝 Escolher uma pizza
-* 🔢 Informar a quantidade
-* 👤 Informar o nome
-* 📞 Informar o telefone
-* 📍 Informar o endereço
-* 💬 Adicionar uma observação
-* 📦 Enviar o pedido
+- 🏠 Acessar a página inicial
+- 🍕 Visualizar o cardápio
+- 📝 Escolher uma pizza
+- 🔢 Informar a quantidade
+- 👤 Informar o nome
+- 📞 Informar o telefone
+- 📍 Informar o endereço
+- 💬 Adicionar uma observação
+- 📦 Preencher o formulário de pedido
 
-Após o envio, os dados do pedido são exibidos na própria página.
+O formulário é apenas visual e não processa ou envia pedidos.
 
 ---
 
@@ -30,9 +31,8 @@ Após o envio, os dados do pedido são exibidos na própria página.
 
 O projeto utiliza:
 
-* **HTML5** — estrutura do site
-* **CSS3** — aparência e responsividade
-* **JavaScript** — funcionamento do formulário
+- **HTML5** — estrutura do site
+- **CSS3** — aparência, estilização e responsividade
 
 ---
 
@@ -50,25 +50,24 @@ QueroPizza/
 
 Contém a estrutura principal do site:
 
-* Cabeçalho
-* Menu de navegação
-* Página inicial
-* Cardápio
-* Formulário de pedidos
-* Rodapé
-* JavaScript do formulário
+- Cabeçalho
+- Menu de navegação
+- Página inicial
+- Cardápio
+- Formulário de pedidos
+- Rodapé
 
 ### `style.css`
 
 Responsável pela aparência do site:
 
-* Cores
-* Fontes
-* Espaçamentos
-* Botões
-* Cards das pizzas
-* Formulário
-* Layout responsivo
+- Cores
+- Fontes
+- Espaçamentos
+- Botões
+- Cards das pizzas
+- Formulário
+- Layout responsivo
 
 ### `README.md`
 
@@ -106,9 +105,9 @@ Mussarela, provolone, parmesão e gorgonzola.
 
 ---
 
-## 📝 Sistema de pedidos
+## 📝 Formulário de pedidos
 
-O cliente preenche o formulário com:
+O site possui um formulário HTML com os seguintes campos:
 
 ```text
 Nome
@@ -119,33 +118,35 @@ Endereço
 Observação
 ```
 
-Ao clicar em **Enviar pedido**, o JavaScript processa as informações e apresenta o pedido na própria página.
+O formulário permite que o cliente preencha os dados do pedido.
+
+**Observação:** como o projeto utiliza apenas HTML e CSS, os dados não são processados nem enviados para a pizzaria.
 
 ---
 
 ## ⚠️ Limitações atuais
 
-O projeto atualmente é apenas um **front-end**.
+O projeto atualmente é apenas um **front-end estático**.
 
 Não possui:
 
-* ❌ Banco de dados
-* ❌ Servidor/backend
-* ❌ Integração com WhatsApp
-* ❌ Envio para telefone
-* ❌ Sistema de pagamento
-* ❌ Sistema de login
-* ❌ Armazenamento permanente dos pedidos
+- ❌ JavaScript
+- ❌ Banco de dados
+- ❌ Servidor/backend
+- ❌ Integração com WhatsApp
+- ❌ Envio para telefone
+- ❌ Sistema de pagamento
+- ❌ Sistema de login
+- ❌ Armazenamento permanente dos pedidos
+- ❌ Processamento automático de pedidos
 
-Os pedidos são exibidos apenas no navegador.
-
-Se a página for atualizada ou fechada, os dados do pedido serão perdidos.
+O formulário é apenas visual.
 
 ---
 
 ## 🚀 Como executar
 
-Não é necessário instalar um servidor para testar a versão atual.
+Não é necessário instalar nenhum programa especial.
 
 ### 1. Baixe o projeto
 
@@ -191,10 +192,10 @@ Para facilitar o desenvolvimento, pode ser utilizada a extensão **Live Server**
 
 O site foi desenvolvido para se adaptar a diferentes tamanhos de tela:
 
-* 💻 Computadores
-* 💻 Notebooks
-* 📱 Celulares
-* 📱 Tablets
+- 💻 Computadores
+- 💻 Notebooks
+- 📱 Celulares
+- 📱 Tablets
 
 O CSS utiliza **Media Queries** para adaptar o layout.
 
@@ -204,20 +205,17 @@ O CSS utiliza **Media Queries** para adaptar o layout.
 
 O projeto foi criado para praticar conceitos básicos de desenvolvimento web:
 
-* HTML5
-* Tags semânticas
-* Links
-* Formulários
-* Inputs
-* Select
-* Textarea
-* CSS3
-* Flexbox
-* CSS Grid
-* Responsividade
-* JavaScript
-* Eventos
-* Manipulação do DOM
+- HTML5
+- Tags semânticas
+- Links
+- Formulários
+- Inputs
+- Select
+- Textarea
+- CSS3
+- Flexbox
+- CSS Grid
+- Responsividade
 
 ---
 
@@ -227,20 +225,21 @@ O QueroPizza pode futuramente ser transformado em um sistema completo de pedidos
 
 Possíveis melhorias:
 
-* [ ] Criar banco de dados
-* [ ] Criar backend
-* [ ] Criar painel administrativo
-* [ ] Salvar pedidos
-* [ ] Alterar status dos pedidos
-* [ ] Criar sistema de login
-* [ ] Cadastrar clientes
-* [ ] Criar carrinho de compras
-* [ ] Calcular o preço automaticamente
-* [ ] Adicionar taxa de entrega
-* [ ] Adicionar formas de pagamento
-* [ ] Integrar com WhatsApp
-* [ ] Criar acompanhamento do pedido
-* [ ] Criar histórico de pedidos
+- [ ] Adicionar JavaScript
+- [ ] Criar banco de dados
+- [ ] Criar backend
+- [ ] Criar painel administrativo
+- [ ] Salvar pedidos
+- [ ] Alterar status dos pedidos
+- [ ] Criar sistema de login
+- [ ] Cadastrar clientes
+- [ ] Criar carrinho de compras
+- [ ] Calcular o preço automaticamente
+- [ ] Adicionar taxa de entrega
+- [ ] Adicionar formas de pagamento
+- [ ] Integrar com WhatsApp
+- [ ] Criar acompanhamento do pedido
+- [ ] Criar histórico de pedidos
 
 ---
 
@@ -248,18 +247,12 @@ Possíveis melhorias:
 
 **Nível:** Iniciante
 
-O projeto acompanha uma evolução de aprendizado:
+O projeto utiliza as seguintes tecnologias:
 
 ```text
 HTML
  ↓
 CSS
- ↓
-JavaScript
- ↓
-Backend
- ↓
-Banco de dados
 ```
 
 ---
