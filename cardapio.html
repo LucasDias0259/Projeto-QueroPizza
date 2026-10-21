@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+
+<section id="cardapio" class="secao">
+    <h2>Nosso cardápio</h2>
+    <p class="subtitulo">Escolha sua favorita</p>
+
+    <div class="cards">
+        <article class="card">
+            <div class="pizza">
+                <img src="./images/pizza_margherita.jpg" width="200" alt="pizza_margherita">
+            </div>
+            <h3>Margherita</h3>
+            <p>Molho de tomate, mussarela, tomate e manjericão.</p>
+            <strong>R$ 39,90</strong>
+            <button class="card-pizza__botao" onclick="pedirPizza('Margherita - R$ 39,90')">
+                Pedir a pizza
+            </button>
+        </article>
+
+        <article class="card">
+            <div class="pizza">
+                <img src="./images/pizza_calabresa.jpg" width="200" alt="pizza-calabresa">
+            </div>
+            <h3>Calabresa</h3>
+            <p>Molho de tomate, mussarela, calabresa e cebola.</p>
+            <strong>R$ 42,90</strong>
+            <button class="card-pizza__botao" onclick="pedirPizza('Calabresa - R$ 42,90')">
+                Pedir a pizza
+            </button>
+        </article>
+
+        <article class="card">
+            <div class="pizza">
+                <img src="./images/pizza_frango_catupiry.jpg" alt="pizza_frango_catupiry" width="200" height="140">
+            </div>
+            <h3>Frango com Catupiry</h3>
+            <p>Frango desfiado, mussarela e catupiry cremoso.</p>
+            <strong>R$ 44,90</strong>
+            <button class="card-pizza__botao" onclick="pedirPizza('Frango com Catupiry - R$ 44,90')">
+                Pedir a pizza
+            </button>
+        </article>
+
+        <article class="card">
+            <div class="pizza">
+                <img src="./images/pizza_quatro_queijo.jpg" alt="pizza_quatro_queijo" width="200" height="140">
+            </div>
+            <h3>Quatro Queijos</h3>
+            <p>Mussarela, provolone, parmesão e gorgonzola.</p>
+            <strong>R$ 46,90</strong>
+            <button class="card-pizza__botao" onclick="pedirPizza('Quatro Queijos - R$ 46,90')">
+                Pedir a pizza
+            </button>
+        </article>
+        <!---- pizza atum -->
+        <article class="card">
+            <div class="pizza">
+                <img src="./images/pizza-atum.jpg" alt="pizza_quatro_queijo" width="200" height="140">
+            </div>
+            <h3>Pizza Atum</h3>
+            <p>Molho de tomate, mussarela, atum, cebola e azeitona</p>
+            <strong>R$ 42,90</strong>
+            <button class="card-pizza__botao" onclick="pedirPizza('Quatro Queijos - R$ 46,90')">
+                Pedir a pizza
+            </button>
+        </article>
+         <!---- pizza atum -->
+
+        <!-- Pizza de Bacon Cheddar -->
+        <article class="card">
+            <div class="pizza">
+                <img src="./images/pizza-bacon-cheddar.jpg" alt="pizza_quatro_queijo" width="200" height="140">
+            </div>
+            <h3>Pizza De Bacon Com Cheddar</h3>
+            <p>Molho de tomate, mussarela, bacon, cheddar e orégano</p>
+            <strong>R$ 47,90</strong>
+            <button class="card-pizza__botao" onclick="pedirPizza('Quatro Queijos - R$ 46,90')">
+                Pedir a pizza
+            </button>
+        </article>
+    </div>
+</section>
+    </main>
+
+<footer>
+    <p>QueroPizza Rua xxxxxxx-xxx</p>
+</footer>
+
+<script>
+    function pedirPizza(nomePizza) {
+        window.location.href = "pedido.html?pizza=" + encodeURIComponent(nomePizza);
+    }
+</script>
+
+</body>
+</html>

@@ -34,6 +34,12 @@ header {
     z-index: 10;
 }
 
+.imagem-principal{
+  background-color: var(--deep-forest);
+  padding: 10px;
+  border: 3px solid var(--espresso);
+}
+
 .logo {
     font-size: 25px;
     font-weight: bold;
@@ -46,6 +52,9 @@ nav {
 
 nav a {
     color: white;
+    background-image: linear-gradient(to bottom , var(--espresso),var(--golden-pollen));
+    border-radius: 20px;
+    padding: 6px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -58,8 +67,8 @@ nav a:hover {
 }
 
 .hero {
-    min-height: 520px;
-    padding: 70px 10%;
+    min-height: 420px;
+    padding: 40px 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -104,6 +113,7 @@ nav a:hover {
 
 .botao:hover {
     background: #8d1717;
+    color: var(--golden-pollen);
 }
 
 .secao {
@@ -261,3 +271,61 @@ footer {
         padding: 50px 6%;
     }
 }
+
+/* CARTAO DE PEDIR A PIZZA*/
+
+.card-pizza {
+  width: 100%;
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #222;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.card-pizza__imagem {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #222;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.card-pizza__imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-pizza__botao {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #e63946;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.card-pizza__botao:hover {
+  background-color: #c1121f;
+  color: var(--golden-pollen);
+}
+
+.card-pizza__botao:active {
+  transform: scale(0.98);
+}
+
