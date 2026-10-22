@@ -1,0 +1,126 @@
+.contato {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contato .subtitulo {
+    margin: 10px 0 35px;
+    color: wheat;
+}
+
+/* Cartão do formulário */
+#contatoForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+/* Rótulos */
+#contatoForm label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+    color: #292929;
+}
+
+/* Campos */
+#contatoForm input,
+#contatoForm select,
+#contatoForm textarea {
+    width: 100%;
+    padding: 13px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #292929;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#contatoForm input::placeholder,
+#contatoForm textarea::placeholder {
+    color: #999;
+}
+
+#contatoForm input:focus,
+#contatoForm select:focus,
+#contatoForm textarea:focus {
+    outline: none;
+    border-color: var(--spicy-paprika);
+    box-shadow: 0 0 0 3px rgba(221, 96, 49, 0.2);
+}
+
+#contatoForm select {
+    cursor: pointer;
+}
+
+#contatoForm textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Botão de enviar */
+#contatoForm .enviar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 25px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background: #b52222;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#contatoForm .enviar:hover {
+    background: #8d1717;
+    color: var(--golden-pollen);
+}
+
+#contatoForm .enviar:active {
+    transform: scale(0.98);
+}
+
+/* Mensagem de confirmação */
+.contato .resultado {
+    max-width: 650px;
+    margin: 20px auto 0;
+}
+
+/* Celular */
+@media (max-width: 550px) {
+    .contato {
+        padding: 50px 6%;
+    }
+
+    .contato h2 {
+        font-size: 30px;
+    }
+
+    #contatoForm {
+        padding: 20px;
+    }
+}
+
+.site-nav a[aria-current="page"] {
+  background-color: var(--espresso);
+  color: var(--golden-pollen);
+
+}

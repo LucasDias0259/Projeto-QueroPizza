@@ -12,29 +12,37 @@
 <header>
     <div class="logo">QueroPizza</div>
     <nav>
+        <a href="index.html">Voltar Para Início</a>
         <a href="index.html">Voltar ao cardápio</a>
     </nav>
 </header>
 
 <main>
     <section class="secao pedido">
+
         <h2>Faça seu pedido</h2>
+
         <p class="subtitulo">Preencha seus dados para finalizar</p>
 
+
+
         <form id="pedidoForm">
+          <p class="total">Total Do Pedido: <strong id="total">R$ 0,00</strong></p>
+          <p class="mensagem-consulta"><strong>Porfavor Confirme Seu Cadastro Abaixo</strong></p>
             <label for="nome">Seu nome</label>
             <input type="text" id="nome" placeholder="Digite seu nome" required>
 
             <label for="telefone">Telefone</label>
             <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
 
-            <label for="pizzaEscolhida">Escolha a pizza</label>
+            <label for="pizzaEscolhida">Pizza Escolhida</label>
             <select id="pizzaEscolhida" required>
-                <option value="">Selecione uma pizza</option>
+                <option value="">Escolha Outra pizza</option>
                 <option value="Margherita - R$ 39,90">Margherita - R$ 39,90</option>
                 <option value="Calabresa - R$ 42,90">Calabresa - R$ 42,90</option>
                 <option value="Frango com Catupiry - R$ 44,90">Frango com Catupiry - R$ 44,90</option>
                 <option value="Quatro Queijos - R$ 46,90">Quatro Queijos - R$ 46,90</option>
+                 <option value="Pizza Atum - R$ 42,90">Pizza Atum - R$ 42,90</option>
             </select>
 
             <label for="quantidade">Quantidade</label>
@@ -46,7 +54,9 @@
             <label for="observacao">Observação</label>
             <textarea id="observacao" rows="3" placeholder="Ex.: sem cebola"></textarea>
 
+
             <button type="submit" class="botao enviar">Enviar pedido</button>
+
         </form>
 
         <div id="resultado" class="resultado"></div>
@@ -58,29 +68,55 @@
 </footer>
 
 <script>
-    // Preenche a pizza escolhida no cardápio, se a página foi aberta por um botão
+    const campoPizza = document.getElementById("pizzaEscolhida");
+    const campoQuantidade = document.getElementById("quantidade");
+    const campoTotal = document.getElementById("total");
+
+    // Pega o preço do texto da opção, ex.: "Margherita - R$ 39,90" -> 39.90
+    function extrairPreco(textoPizza) {
+        const partes = textoPizza.split("R$");
+        if (partes.length < 2) return 0;
+        return parseFloat(partes[1].trim().replace(".", "").replace(",", "."));
+    }
+
+    function formatarReal(valor) {
+        return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    }
+
+    function atualizarTotal() {
+        const preco = extrairPreco(campoPizza.value);
+        const quantidade = parseInt(campoQuantidade.value, 10) || 0;
+        campoTotal.textContent = formatarReal(preco * quantidade);
+    }
+
+    // Preenche a pizza vinda da URL, se houver
     const params = new URLSearchParams(window.location.search);
     const pizzaDaUrl = params.get("pizza");
     if (pizzaDaUrl) {
-        document.getElementById("pizzaEscolhida").value = pizzaDaUrl;
+        campoPizza.value = pizzaDaUrl;
     }
 
-    // Mostra a confirmação ao enviar o formulário
+    campoPizza.addEventListener("change", atualizarTotal);
+    campoQuantidade.addEventListener("input", atualizarTotal);
+    atualizarTotal();
+
+    // Confirmação ao enviar o formulário
     document.getElementById("pedidoForm").addEventListener("submit", function (evento) {
         evento.preventDefault();
 
         const nome = document.getElementById("nome").value;
-        const pizza = document.getElementById("pizzaEscolhida").value;
-        const quantidade = document.getElementById("quantidade").value;
+        const pizza = campoPizza.value;
+        const quantidade = campoQuantidade.value;
         const endereco = document.getElementById("endereco").value;
+        const total = formatarReal(extrairPreco(pizza) * parseInt(quantidade, 10));
 
         document.getElementById("resultado").textContent =
             "Obrigado, " + nome + "! Seu pedido de " + quantidade + " x " + pizza +
-            " foi recebido. Entregaremos em: " + endereco;
+            " foi recebido. Total: " + total + ". Entregaremos em: " + endereco;
 
         this.reset();
+        campoTotal.textContent = formatarReal(0);
     });
 </script>
-
 </body>
 </html>
