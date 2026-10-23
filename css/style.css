@@ -131,6 +131,12 @@ nav a:hover {
     color: wheat;
 }
 
+.cadastro{
+  background-color: var(--deep-forest);
+  color: #fff;
+  border-radius: 12px;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -186,6 +192,17 @@ nav a:hover {
 .pedido {
     background-image: linear-gradient(to top, #dd6031ff,#482728ff);
     background-attachment: fixed;
+}
+.total{
+  background-color: var(--deep-forest);
+  text-align: center;
+  color: white;
+}
+.mensagem-consulta{
+  background-color: var(--espresso);
+  color: #fff;
+  text-align: center;
+
 }
 
 form {
