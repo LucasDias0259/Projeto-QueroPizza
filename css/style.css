@@ -35,6 +35,10 @@ header {
 
 }
 
+.site-nav a[aria-current="page"]{
+  background-color: white;
+  color: green;
+}
 .imagem-principal{
   background-color: var(--deep-forest);
   padding: 10px;
